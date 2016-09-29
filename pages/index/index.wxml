@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" bindscrolltoupper="upper" 
+    bindscrolltolower="lower" bindscroll="scroll" class="scroll-wrapper">
+    <view class="scroll-view-item" wx:for="{{news}}" data-id="{{item.id}}" catchtap="bindItemTap">
+      <image class="item-img" src="{{item.img}}"></image>
+      <view class="detail">
+        <text class="item-name">{{item.title}}</text>
+        <view class="tips">
+          <text class="item-info">文 / {{item.author}} • {{item.time}}</text>
+          <text class="category">{{item.category}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
